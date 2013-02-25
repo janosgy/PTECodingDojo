@@ -1,15 +1,19 @@
 class Player{
 private:
-    int pointsIndex = 0;
-    const int points[4] = { 0, 15, 30, 40};
+    int points;
 
 public:
-    void scores(){
-        pointsIndex++;
+
+    Player(){
+        points = 0;
     }
 
     int getPoints(){
-        return points[pointsIndex];
+        return points;
+    }
+
+    void setPoints(int newPoints){
+        points = newPoints;
     }
 
 

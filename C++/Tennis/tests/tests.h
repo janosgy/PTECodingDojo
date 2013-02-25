@@ -1,49 +1,24 @@
 namespace{
     TEST(initialPoints){
         Game game;
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerB));
+        // a Game és Player szétválasztása miatt.
+        Player playerA, playerB;
+
+        CHECK_EQUAL(0, playerA.getPoints());
+        CHECK_EQUAL(0, playerB.getPoints());
     }
+
+    // először tesztek, kielégíti, aztán Player osztály.
+    // getPlayerPoints(std::string) {} - később cserélhető a Player osztálybeli enum-ra.
+
 
     TEST(playerAScores){
         Game game;
-        game.playerScores(Game::PlayerA);
-        CHECK_EQUAL(15, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerB));
-    }
+        Player playerA, playerB;
+        game.playerScores(playerA);
 
-    TEST(playerBScores){
-        Game game;
-        game.playerScores(Game::PlayerB);
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(15, game.getPlayerPoints(Game::PlayerB));
-    }
-
-    TEST(playerAScoresTwice){
-        Game game;
-        game.playerScores(Game::PlayerA);
-        game.playerScores(Game::PlayerA);
-        CHECK_EQUAL(30, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerB));
-    }
-
-    TEST(independentScoring){
-        Game game;
-        game.playerScores(Game::PlayerA);
-        game.playerScores(Game::PlayerB);
-        game.playerScores(Game::PlayerA);
-        game.playerScores(Game::PlayerB);
-        CHECK_EQUAL(30, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(30, game.getPlayerPoints(Game::PlayerB));
-    }
-
-    TEST(playerAScoresThreeTimes){
-        Game game;
-        game.playerScores(Game::PlayerA);
-        game.playerScores(Game::PlayerA);
-        game.playerScores(Game::PlayerA);
-        CHECK_EQUAL(40, game.getPlayerPoints(Game::PlayerA));
-        CHECK_EQUAL(0, game.getPlayerPoints(Game::PlayerB));
+        CHECK_EQUAL(15, playerA.getPoints());
+        CHECK_EQUAL(0, playerB.getPoints());
     }
 
 

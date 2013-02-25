@@ -15,13 +15,8 @@ public:
         delete currentPlayers[PlayerB];
     }
 
-
-    int getPlayerPoints(avaiblePlayers player){
-        currentPlayers[player]->getPoints();
-    }
-
-    void playerScores(avaiblePlayers player){
-        currentPlayers[player]->scores();
+    void playerScores(Player &player){
+        player.setPoints(15);
     }
 
 };
