@@ -21,5 +21,37 @@ namespace{
         CHECK_EQUAL(0, playerB.getPoints());
     }
 
+    TEST(playerAScoresTwice){
+        Game game;
+        Player playerA, playerB;
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+
+        CHECK_EQUAL(30, playerA.getPoints());
+        CHECK_EQUAL(0, playerB.getPoints());
+    }
+
+    TEST(playerAScoresThreeTimes){
+        Game game;
+        Player playerA, playerB;
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+
+        CHECK_EQUAL(40, playerA.getPoints());
+        CHECK_EQUAL(0, playerB.getPoints());
+    }
+
+    TEST(playerAScoresFourTimesAndWin){
+        Game game;
+        Player playerA, playerB;
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+        game.playerScores(playerA);
+
+        //CHECK_EQUAL(playerA, game.getWinner());
+        //CHECK_EQUAL(true, playerA.setWinner(true));
+    }
 
 }

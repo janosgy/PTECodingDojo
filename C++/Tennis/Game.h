@@ -1,22 +1,33 @@
 #include <iostream>
-#include <map>
 
 class Game{
-public:
-    enum avaiblePlayers { PlayerA, PlayerB };
-    std::map<avaiblePlayers, Player*> currentPlayers;
 
-    Game(){
-        currentPlayers[PlayerA] = new Player;
-        currentPlayers[PlayerB] = new Player;
-    }
-    ~Game(){
-        delete currentPlayers[PlayerA];
-        delete currentPlayers[PlayerB];
-    }
+public:
 
     void playerScores(Player &player){
-        player.setPoints(15);
-    }
+        switch(player.getPoints()){
+            case 0:
+                player.setPoints(15);
+                break;
 
+            case 15:
+                player.setPoints(30);
+                break;
+
+            case 30:
+                player.setPoints(40);
+                break;
+
+            case 40:
+                player.setWinner(true);
+                break;
+
+        }
+
+    }
+    /*
+    Player* getWinner(){
+        return winner;
+    }
+    */
 };
