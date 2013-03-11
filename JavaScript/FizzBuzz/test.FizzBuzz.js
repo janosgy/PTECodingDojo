@@ -51,3 +51,5 @@ test('Translator should return 1 on filter 1', function() {
     equal(translator.getTranslationOf(1), '1'); 
 });
 
+
+

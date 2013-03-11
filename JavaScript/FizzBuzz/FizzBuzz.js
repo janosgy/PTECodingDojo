@@ -26,9 +26,9 @@ Translator = function(dictionary) {
     }
 }
 
-FizzBuzz = function() {
-    
-    var divisorOf = function(number, divisor) {
+FizzBuzzDictionary = function () {
+
+	var divisorOf = function(number, divisor) {
         return number % divisor === 0;
     },
     isFizz = function(number) {
@@ -53,13 +53,27 @@ FizzBuzz = function() {
         new Translation('Fizz', function(number) {
             return isFizz(number)
         })
-    ];    
+    ];   
 
-    
+	this.getTranslations = function(){
+		return translations;
+	}
+};
+/*
+FizzBuzzDictionary.prototype = {
+
+	getTranslations: function() {
+		return this.translation;
+	}
+	
+}
+*/
+FizzBuzz = function() {
 
     this.of = function(number) {
 
-        var translator = new Translator(translations);
+		var fizzBuzzDictionary = new FizzBuzzDictionary(),
+        	translator = new Translator(fizzBuzzDictionary.getTranslations());
         return translator.getTranslationOf(number);
 
     };
@@ -95,4 +109,5 @@ FizzBuzz = function() {
     //return number;
 
 };
+
 //stratégia. objektumként kezelem. 
