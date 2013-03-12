@@ -52,4 +52,4 @@ A fordítási szabályokat gyűjtik össze. Elegáns megoldás arra, hogy a fela
 Ez az osztály tartalmazza az üzleti logikát, vagyis kap egy szótárat *(addDictionary)* és egy fordítandó szót, majd végignézi a szócikkeket, ha talál a fordításnak megfelelőt, akkor visszaadja az értékét.
 
 ##Szerző
-Fincza András
+[Fincza András](https://github.com/drawain)
