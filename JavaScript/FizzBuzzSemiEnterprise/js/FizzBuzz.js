@@ -5,7 +5,7 @@ FizzBuzz = function() {
 
     translator.addDictionary(fizzBuzzDictionary);
 
-    this.of = function (number) {
+    this.of = function(number) {
         return translator.getTranslationOf(number);
     };
 
