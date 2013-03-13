@@ -3,6 +3,14 @@ Ez a kód a PTECodingDojo egyik workshopján készült. Célja az, hogy egy nagy
 
 A következőkben többször használom az osztály kifejezést, ez ne tévesszen meg senkit: a JavaScriptben nincsenek osztályok, de a nyelv rugalmassága miatt lehet osztály-szerűen kezelni az objektumokat, így hasonló módszerrel fejleszthetünk benne, mint más OOP nyelvekben.
 
+##A FizzBuzz kata-ról
+A feladat egy olyan program írása, amely minden számra visszaadja a számot, kivéve a következő eseteket:
+- 3 és annak többszöröseinél Fizz-t ad vissza
+- 5 és annak többszöröseinél Buzz-t ad vissza
+- 15 és annak többszöröseinél FizzBuzz-t ad vissza
+
+További infók (itt)[http://codingdojo.org/cgi-bin/wiki.pl?KataFizzBuzz].
+
 ##A *Stratégia* mintáról röviden
 Célja, hogy elkerüljük a **hosszú feltételes** utasításokat, helyette az azonos viselkedés különböző implementációit külön osztályok tartalmazzák. Ez függetleníti az eredeti osztályt a viselkedések megvalósításától, így az rövidebb, áttekinthetőbb lesz. Az egyes stratégiák száma könnyen bővíthető: ha egy új viselkedést akarunk létrehozni elég egy új osztályt deklarálni, nem kell módosítanunk az eredeti osztályunkat (ez ugye problémákhoz vezethet ha a **hosszú feltételünk** máshol is szerepel a kódban).
 
