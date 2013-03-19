@@ -1,0 +1,10 @@
+load:
+  - /Weapon.js
+  - weapons/Fist.js
+  - weapons/Dagger.js
+  - weapons/Sword.js
+  - weapons/MagicWand.js
+  - /Hero.js
+
+test:
+  - tests/*.js
